@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class EntidadBancaria {
 
-    private int idEntidad;
+    private int idEntidadBancaria;
     private String codigoEntidad;
     private String nombre;
     private String cif;
@@ -29,7 +29,7 @@ public class EntidadBancaria {
         
        this.cif=cif;
        this.codigoEntidad=codigoEntidad;
-       this.idEntidad=idEntidad;
+       this.idEntidadBancaria=idEntidad;
        this.nombre=nombre;
        this.tipoEntidadBancaria= tipoEntidadBancaria;
     }
@@ -44,11 +44,11 @@ public class EntidadBancaria {
     
 
     public int getIdEntidad() {
-        return idEntidad;
+        return idEntidadBancaria;
     }
 
     public void setIdEntidad(int idEntidad) {
-        this.idEntidad = idEntidad;
+        this.idEntidadBancaria = idEntidad;
     }
 
     public String getCodigoEntidad() {
