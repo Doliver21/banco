@@ -29,17 +29,28 @@ public class EntidadBancariaDAO {
 
     }
 
-    EntidadBancaria read(int idEntidadBancaria) throws SQLException {
+    public EntidadBancaria read(int idEntidadBancaria) throws SQLException {
         String selectSQL = "Select * from entidadbancaria WHERE idEntidadBancaria= ? ";
         PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
 
         preparedStatement.setInt(1, idEntidadBancaria);
         ResultSet rs = preparedStatement.executeQuery();
 
-        String idEntidad = rs.getString("idEntidadBancaria");
-        String CodigoEntidad = rs.getString("codigoEntidad");
-        String Nombre = rs.getString("nombre");
-        String cif = rs.getString("cif");
+
+        while (rs.next()) {
+
+            String idEntidad = rs.getString("idEntidadBancaria");
+            String codigoEntidad = rs.getString("codigoEntidad");
+            String nombre = rs.getString("nombre");
+            String cif = rs.getString("cif");
+            String tipoEntidadBancaria = rs.getString("tipoEntidadBancaria");
+            System.out.println("ID  " + "      CodigoEntidad" + "      Nombre" + "       Cif" + "      TipoEntidadBancaria");
+            System.out.println("" + idEntidad + "   " + codigoEntidad + "       " + nombre + "   " + cif + "         " + tipoEntidadBancaria);
+
+        }
+        
+        System.out.println("Se ha conectado a la base de datos.");
+
 
 
 
@@ -48,8 +59,6 @@ public class EntidadBancariaDAO {
         connection.close();
 
         return null;
-
-
 
     }
 
@@ -80,14 +89,14 @@ public class EntidadBancariaDAO {
     void delete(int idEntidadBancaria) throws SQLException {
 
         String deleteSQL = "DELETE from entidadbancaria where idEntidadBancaria=?";
-        
+
         PreparedStatement preparedStatement = connection.prepareStatement(deleteSQL);
         preparedStatement.setInt(1, idEntidadBancaria);
-        
+
         preparedStatement.execute();
- 
-         
-       
+
+
+
 
 
 
@@ -97,6 +106,14 @@ public class EntidadBancariaDAO {
     }
 
     List<EntidadBancaria> findAll() {
+        
+             
+                
+        
+        
+        
+        
+        
         return null;
 
     }

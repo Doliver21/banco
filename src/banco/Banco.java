@@ -5,6 +5,7 @@
 package banco;
 
 import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.util.GregorianCalendar;
 
 /**
@@ -16,9 +17,16 @@ public class Banco {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        EntidadBancariaDAO entidadBancariaDAO = new EntidadBancariaDAO();
+        entidadBancariaDAO.read(1);
         
         
+        
+        
+        
+      
+        /*
         //Entidades
         EntidadBancaria entidad1 = new EntidadBancaria(1,"0147","Sabadell","46451656P",TipoEntidadBancaria.BANCO);
         EntidadBancaria entidad2 = new EntidadBancaria(2,"0457","Caja Mediterraneo","8745211656P",TipoEntidadBancaria.CAJADEAHORRO);
@@ -59,6 +67,8 @@ public class Banco {
            
         }
       //  System.out.println(cuenta1.getNumeroDeCuenta()+ "" + cuenta1.getDc()"" +" " + cuenta1.getSucursalBancaria())
+        
+}*/
         
 }
 }
