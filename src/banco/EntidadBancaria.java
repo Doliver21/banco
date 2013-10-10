@@ -27,14 +27,14 @@ public class EntidadBancaria {
     
     
     
-   /* public EntidadBancaria(int idEntidad ,String codigoEntidad,String nombre,String cif , TipoEntidadBancaria tipoEntidadBancaria){
+   public EntidadBancaria(int idEntidad ,String codigoEntidad,String nombre,String cif , TipoEntidadBancaria tipoEntidadBancaria){
         
        this.cif=cif;
        this.codigoEntidad=codigoEntidad;
        this.idEntidadBancaria=idEntidad;
        this.nombre=nombre;
        this.tipoEntidadBancaria= tipoEntidadBancaria;
-    }*/
+    }
     public List<SucursalBancaria> getSurcursales() {
         return Surcursales;
     }
